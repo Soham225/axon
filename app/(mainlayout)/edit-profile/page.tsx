@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { auth } from "@/utils/auth";
 import prisma from "@/utils/db";
 import { headers } from "next/headers";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 
 export default async function EditProfile() {
   const session = await auth.api.getSession({
@@ -11,7 +11,7 @@ export default async function EditProfile() {
   });
 
   if (!session?.user) {
-    return notFound();
+    return redirect("/log-in");
   }
 
   const data = await prisma.user.findUnique({
