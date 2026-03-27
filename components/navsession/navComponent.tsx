@@ -100,7 +100,7 @@ export function NavSession({ session }: { session: iAppProps | null }) {
             />
           </div>
         ) : (
-          <div className="hidden md:flex items-center gap-4">
+          <div className="flex items-center gap-4">
             <ModeToggle />
             <Link
               className={buttonVariants({ variant: "secondary", size: "lg" })}
