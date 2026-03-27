@@ -5,6 +5,10 @@ import {
   BarChart3,
   CirclePlus,
   Code2,
+  Github,
+  Linkedin,
+  Mail,
+  Phone,
   Shield,
   Users,
   Zap,
@@ -16,7 +20,7 @@ import { cn } from "@/lib/utils";
 
 export default function Homepage() {
   return (
-    <div className=" min-h-screen">
+    <div className=" min-h-screen p-4 md:p-0">
       {/* Hero Section */}
       <section className="relative py-6">
         <div className="mx-auto max-w-4xl text-center ">
@@ -201,39 +205,37 @@ export default function Homepage() {
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent">
                 <Zap className="h-5 w-5 text-primary" />
               </div>
-              <span className="font-bold text-primary">AXON</span>
+              <span className="font-bold text-2xl text-primary">AXON</span>
             </div>
             <div className="flex flex-wrap justify-center gap-8">
-              <a
-                href="#"
-                className="text-sm text-foreground/60 hover:text-foreground"
+              <Link
+                className={buttonVariants({ variant: "secondary" })}
+                href={"https://www.linkedin.com/in/soham225"}
               >
-                Twitter
-              </a>
+                <Linkedin className="text-primary" />
+              </Link>
+
               <a
-                href="#"
-                className="text-sm text-foreground/60 hover:text-foreground"
+                className={buttonVariants({ variant: "secondary" })}
+                href="mailto:sohamdutta225@gmail.com"
+                target="_blank"
               >
-                LinkedIn
+                <Mail className="text-primary" />
               </a>
-              <a
-                href="#"
-                className="text-sm text-foreground/60 hover:text-foreground"
+
+              <Link
+                className={buttonVariants({ variant: "secondary" })}
+                href="tel:+919609646695"
               >
-                GitHub
-              </a>
-              <a
-                href="#"
-                className="text-sm text-foreground/60 hover:text-foreground"
+                <Phone className="text-primary" />
+              </Link>
+
+              <Link
+                className={buttonVariants({ variant: "secondary" })}
+                href={"https://github.com/Soham225"}
               >
-                Privacy
-              </a>
-              <a
-                href="#"
-                className="text-sm text-foreground/60 hover:text-foreground"
-              >
-                Terms
-              </a>
+                <Github className="text-primary" />
+              </Link>
             </div>
           </div>
         </div>
